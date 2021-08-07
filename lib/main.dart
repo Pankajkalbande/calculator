@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Calculator App",
-      theme: ThemeData.dark(),git 
+      theme: ThemeData.dark(),
       home: Calci(),
     );
   }
@@ -33,6 +33,30 @@ class _CalciState extends State<Calci> {
       num1 = int.parse(t1.text);
       num2 = int.parse(t2.text);
       sum = num1 + num2;
+    });
+  }
+
+  void doSubstraction() {
+    this.setState(() {
+      num1 = int.parse(t1.text);
+      num2 = int.parse(t2.text);
+      sum = num1 - num2;
+    });
+  }
+
+  void doMultiplication() {
+    this.setState(() {
+      num1 = int.parse(t1.text);
+      num2 = int.parse(t2.text);
+      sum = num1 * num2;
+    });
+  }
+
+  void doDivision() {
+    this.setState(() {
+      num1 = int.parse(t1.text);
+      num2 = int.parse(t2.text);
+      sum = (num1 / num2) as int;
     });
   }
 
@@ -88,7 +112,7 @@ class _CalciState extends State<Calci> {
                 // ignore: deprecated_member_use
                 RaisedButton(
                   child: Text('-'),
-                  onPressed: doAddition,
+                  onPressed: doSubstraction,
                 ),
               ],
             ),
@@ -98,12 +122,12 @@ class _CalciState extends State<Calci> {
                 // ignore: deprecated_member_use
                 RaisedButton(
                   child: Text('*'),
-                  onPressed: () {},
+                  onPressed: doMultiplication,
                 ),
                 // ignore: deprecated_member_use
                 RaisedButton(
                   child: Text('/'),
-                  onPressed: () {},
+                  onPressed: doDivision,
                 ),
               ],
             ),
