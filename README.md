@@ -1,5 +1,9 @@
 # calculator
 
+
+TO VIEW SOURSE CODE GO TO 
+ -> lib
+ -> main.dart file
 A new Flutter project.
 
 ## Getting Started
